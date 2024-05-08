@@ -5,6 +5,7 @@
 本项目实现BM1684X部署语言大模型[MiniCPM-2B](https://huggingface.co/openbmb/MiniCPM-2B-sft-bf16-llama-format)。通过[TPU-MLIR](https://github.com/sophgo/tpu-mlir)编译器将模型转换成bmodel，并采用c++代码将其部署到BM1684X的PCIE环境，或者SoC环境。
 
 下文中默认是PCIE环境；如果是SoC环境，按提示操作即可。
+SOC环境，您可以参考[LLM_TPU](https://github.com/sophgo/LLM-TPU.git)这个的相关方法进行部署。
 
 # 目录说明
 ```
