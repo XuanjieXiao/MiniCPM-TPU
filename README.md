@@ -36,12 +36,20 @@
 * 模型编译必须要在docker内完成，无法在docker外操作
 
 ### 步骤一：模型下载
-虽然MiniCPM模型允许商业开源，但是模型下载需要想Meta提交使用申请，因此测试模型时可以使用我们已经下载好的模型
+虽然MiniCPM模型允许商业开源，因此测试模型时可以使用我们已经下载好的模型
 ```bash
 pip3 install dfss
 # minicpm-2B
-python3 -m dfss --url=open@sophgo.com:sophon-demo/MiniCPM/minicpm-2b-torch.zip
-unzip minicpm-2b-torch.zip
+python3 -m dfss --url=open@sophgo.com:sophon-demo/MiniCPM/minicpm-2b-llama-torch.zip
+unzip minicpm-2b-llama-torch.zip
+```
+
+此外，如果您想使用我们编译好的bmodel模型，可以使用下面的命令下载，这样的话，您可以直接跳到最后一步【# 阶段二：python调用pipeline程序执行推理并进行输出】：
+```bash
+pip3 install dfss
+# models
+python3 -m dfss --url=open@sophgo.com:sophon-demo/MiniCPM/models.zip
+unzip models.zip
 ```
 
 ### 步骤二：下载docker
